@@ -13,18 +13,18 @@ $.Tabs.clickTab = function (event) {
   this.$activeTab.removeClass('active').addClass('transitioning');
   this.$activeLink.removeClass('active');
   var $target = $(event.currentTarget);
+
   this.$activeTab.one('transitionend', function () {
     this.$activeTab.removeClass('transitioning')
     this.$activeLink = $target.addClass('active');
     $new = $($target.attr('href')).addClass('active').addClass('transitioning')
     this.$activeTab = $new
+
     setTimeout(function () {
       $new.removeClass('transitioning')
     }, 0)
+
   }.bind(this))
-
-
-
 };
 
 $.fn.tabs = function () {
