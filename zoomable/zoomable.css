@@ -1,0 +1,32 @@
+div.zoomable {
+  width: 500px;
+  position: relative;
+}
+
+div.zoomable div.focus-box {
+  border: 1px solid white;
+  position: absolute;
+  display: block;
+  transition: top .5s, left .5s;
+}
+
+div.zoomable img {
+  position: relative;
+  width: 100%;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+div.zoomed-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  /*background-image: '../t_rex_jet.jpg';
+  background-size: 200%;*/
+}
